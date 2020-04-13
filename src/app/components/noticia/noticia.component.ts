@@ -15,4 +15,10 @@ export class NoticiaComponent implements OnInit {
 
   ngOnInit() {}
 
+  abrirNoticia() {
+
+    console.log('noticia', this.noticia.url);
+
+  }
+
 }
