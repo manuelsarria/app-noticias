@@ -1,17 +1,24 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Tab 3
+      Favoritos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="dark">
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-slides [options]="sliderOpts"
+              *ngIf="dataLocalServices.noticias.length === 0">
+    <ion-slide>
+
+      <ion-label>No Hay Favoritos </ion-label>
+
+    </ion-slide>
+  </ion-slides>
+
+  <app-noticias *ngIf="dataLocalServices.noticias.length > 0"
+                [enFavoritos]="true"
+                [noticias]="dataLocalServices.noticias"></app-noticias>
+
 </ion-content>
