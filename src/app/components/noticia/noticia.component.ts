@@ -109,7 +109,7 @@ export class NoticiaComponent implements OnInit {
           .catch((error) => console.log('Error sharing', error));
       } else {
 
-        console.log('no se pudo compartir el navegador no loa soporta');
+        console.log('no se pudo compartir el navegador no lo soporta');
 
       }
     }
